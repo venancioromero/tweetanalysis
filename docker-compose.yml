@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    container_name: mongoDB
+
+  tweetanalysis:
+    image: venoty/tweetanalysis
+    links:
+      - db
+  
